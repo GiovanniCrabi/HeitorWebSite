@@ -43,7 +43,7 @@ export const LandingPage = () => {
 
             <p className='text-sm md:text-3xl text-white text-bold z-10 sm:px-10 md:px-52 uppercase'>
               <Typewriter
-                words={['Conquiste seus objetivos em 2023!', 'Entre para o time', 'Treino personalizados']}
+                words={['Conquiste seus objetivos em 2023!', 'Entre para o time', 'Treinos personalizados']}
                 cursor
                 cursorStyle='_'
                 loop={5}

@@ -1,10 +1,10 @@
-import { LandingPage } from './sections/LandingPage';
+import { LandingPage } from './pages/LandingPage';
 import './index.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { About } from './sections/About';
-import { Consultancy } from './sections/Consultancy';
-import { Contact } from './sections/Contact';
+import { About } from './pages/About';
+import { Consultancy } from './pages/Consultancy';
+import { Contact } from './pages/Contact';
 
 function App() {
   return (

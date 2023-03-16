@@ -12,7 +12,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   let activeStyle = {
-    color: "rgb(253 224 71)",
+    color: '#facc15',
   };
 
   return (
