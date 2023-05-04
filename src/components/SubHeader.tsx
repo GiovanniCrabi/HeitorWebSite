@@ -9,7 +9,7 @@ export const SubHeader = ({ title }: SubHeaderProps) => {
     <>
       <div className="md:hidden bg-black z-10">
         <Header />
-        <h1 className="text-white uppercase text-4xl flex justify-center">
+        <h1 className="text-yellow.4 uppercase text-4xl flex justify-center">
           {title}
         </h1>
       </div>
