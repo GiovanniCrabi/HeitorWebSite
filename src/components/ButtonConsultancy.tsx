@@ -8,8 +8,8 @@ interface ButtonConsultancy {
 
 export const ButtonConsultancy = ({ title, content, link }: ButtonConsultancy) => {
   return (
-    <div className="bg-black.5 flex justify-center items-center w-96 h-96 md:w-[32rem] md:h-[32rem] rounded-full transition-all duration-300 ease-in-out hover:rounded-lg transform hover:scale-110 border-black hover:border-4 hover:border-yellow-400">
-      <div className="column text-center">
+    <div className="bg-black.5 flex justify-center items-center  w-80 h-80 md:w-[32rem] md:h-[32rem] rounded-none md:rounded-full transition-all duration-300 ease-in-out hover:rounded-lg transform hover:scale-110 border-black hover:border-4 hover:border-yellow-400">
+      <div className="column text-center px-8">
         <h1 className="text-yellow.5  font-extrabold text-lg md:text-2xl">{title}</h1>
         <div
           className="text-white space-y-4 text-base md:text-lg mt-8"
