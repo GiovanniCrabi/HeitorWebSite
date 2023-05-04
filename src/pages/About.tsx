@@ -1,13 +1,12 @@
-import { Header } from "../components/Header";
-
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
 
-import gym from '../assets/gym.webp';
-import { Barbell, Flag, MusicNote } from "phosphor-react";
+import gym from '../assets/leg.jpg';
+import { Barbell } from "phosphor-react";
 import { useEffect, useState } from "react";
 import { experienceData } from "../components/Contents";
+import { SubHeader } from "../components/SubHeader";
 
 export const About = () => {
   const [lineColor, setLineColor] = useState<string>("white");
@@ -34,26 +33,9 @@ export const About = () => {
 
   return (
     <div className="flex-col">
-      <div className="md:hidden bg-black z-10">
-        <Header />
-      </div>
-
-      <div
-        className=" h-full w-full overflow-hidden shadow-2xl"
-        style={{
-          backgroundColor: 'black'
-        }}
-      >
-        <img src={gym} className='w-full h-60 absolute opacity-50 invisible md:visible ' />
-
-        <div className="sm:hidden md:flex" >
-          <Header />
-        </div>
-      </div>
-
+      <SubHeader title='Sobre' />
       <div className='flex justify-center items-center'>
         <div className="bg-black.5 rounded-md px-8 md:px-48 py-8 mt-8 w-11/12 md:w-3/4 h-full">
-          <h1 className="font-bold text-bold text-2xl md:text-5xl grid place-items-center py-4 text-yellow.5"> Sobre </h1>
 
           <div className="space-y-4">
             <p className="text-white text-sm md:text-lg font-bold text-center">
