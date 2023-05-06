@@ -1,8 +1,9 @@
 export const Links = [
   { name: 'HOME', src: '/' },
   { name: 'SOBRE', src: '/sobre' },
-  { name: 'CONSULTORIA', src: '/consultancy' },
-  { name: 'CONTATO', src: '/contact' },
+  { name: 'CONSULTORIA', src: '/consultoria' },
+  { name: 'EVOLUÇÕES', src: '/evolucoes' },
+  { name: 'CONTATO', src: '/contato' },
 ]
 
 
@@ -73,7 +74,4 @@ export const experienceData: Experience[] = [
     where: 'Pontec',
     icon: Icons.Armchair,
   },
-
-
-
 ];

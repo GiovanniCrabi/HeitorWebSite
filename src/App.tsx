@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { About } from './pages/About';
 import { Consultancy } from './pages/Consultancy';
 import { Contact } from './pages/Contact';
+import { Evolutions } from './pages/Evolutions';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <Routes>
         <Route path='/' element={ <LandingPage /> } />
         <Route path='/sobre' element={ <About /> } />
-        <Route path='/consultancy' element={ <Consultancy /> } />
-        <Route path='/contact' element={ <Contact /> } />
+        <Route path='/consultoria' element={ <Consultancy /> } />
+        <Route path='/evolucoes' element={ <Evolutions /> } />
+        <Route path='/contato' element={ <Contact /> } />
       </Routes>
     </BrowserRouter>
   
