@@ -1,15 +1,16 @@
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
-
-import gym from '../assets/leg.jpg';
 import { Barbell } from "phosphor-react";
 import { useEffect, useState } from "react";
-import { experienceData } from "../components/Contents";
+import { aboutHim, experienceData } from "../components/Contents";
 import { SubHeader } from "../components/SubHeader";
 
-export const About = () => {
-  const [lineColor, setLineColor] = useState<string>("white");
+const About = () => {
+  const [lineColor, setLineColor] = useState("white");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,63 +30,57 @@ export const About = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, []); 
 
   return (
     <div className="flex-col">
-      <SubHeader title='Sobre' />
-      <div className='flex justify-center items-center'>
+      <SubHeader title="Sobre" />
+      <div className="flex justify-center items-center">
         <div className="bg-black.5 rounded-md px-8 md:px-48 py-8 mt-8 w-11/12 md:w-3/4 h-full">
-
           <div className="space-y-4">
-            <p className="text-white text-sm md:text-lg font-bold text-center">
-              Olá, eu sou o Heitor e me formei em 2014. Desde então, tenho me dedicado a aprimorar minhas habilidades e conhecimentos através de especializações em áreas diversas.
-            </p>
-
-            <p className="text-white text-sm md:text-lg font-bold text-center">
-              Uma das minhas especializações é em Gestão de Projetos, na qual pude aprender sobre técnicas e metodologias para gerenciar projetos de forma eficiente, garantindo o cumprimento dos prazos e objetivos.
-            </p>
-
-            <p className="text-white text-sm md:text-lg font-bold text-center">
-              Outra área em que me especializei é em Marketing Digital, na qual pude aprofundar meus conhecimentos em estratégias de marketing voltadas para o ambiente digital. Com isso, pude ajudar empresas a alcançar um maior público e aumentar sua presença online.
-            </p>
-
-            <p className="text-white text-sm md:text-lg font-bold text-center">
-              Além disso, também me especializei em Desenvolvimento Web, aprendendo técnicas e tecnologias para criar websites e aplicações web de alta qualidade e desempenho.
-            </p>
-
-            <p className="text-white text-sm md:text-lg font-bold text-center">
-              Todas essas especializações me permitem ter uma visão ampla e estratégica sobre as necessidades de uma empresa, além de me capacitar para atuar em áreas diversas, contribuindo para o sucesso de projetos e iniciativas.
-            </p>
+            {aboutHim.map((about, i ) => {
+              return (
+                <p key={i} className="text-white text-sm md:text-lg font-bold text-center">
+                  {about.paragraph}
+                </p>
+              )
+            })}
+            
           </div>
         </div>
       </div>
 
-
-
       <div className=" w-full h-full mt-3">
-        <VerticalTimeline lineColor={lineColor} className='transition-all duration-1000' >
-          {experienceData.map ((experience) => {
+        <VerticalTimeline
+          lineColor={lineColor}
+          className="transition-all duration-1000"
+        >
+          {experienceData.map((experience, i) => {
             return (
               <VerticalTimelineElement
-              className="vertical-timeline-element--work transition-all duration-500"
-              contentStyle={{ background: '#eab308', color: '#050101' }}
-              contentArrowStyle={{ borderRight: '7px solid  #eab308' }}
-              date={experience.date}
-              dateClassName="text-black-100 md:text-white"
-              icon={ < Barbell /> }
-              iconClassName='bg-yellow-500 w-2 h-2 rounded-full'
-              
-            >
-              <h3 className="vertical-timeline-element-title">{experience.whatWas}</h3>
-              <h4 className="vertical-timeline-element-subtitle">{experience.where}</h4>
-              <p>{experience.position}</p>
-            </VerticalTimelineElement>
-            )
+                key={i}
+                className="vertical-timeline-element--work transition-all duration-500"
+                contentStyle={{ background: "#eab308", color: "#050101" }}
+                contentArrowStyle={{ borderRight: "7px solid  #eab308" }}
+                date={experience.date}
+                dateClassName="text-black-100 md:text-white"
+                icon={<Barbell />}
+                iconClassName="bg-yellow-500 w-2 h-2 rounded-full"
+              >
+                <h3 className="vertical-timeline-element-title">
+                  {experience.whatWas}
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                  {experience.where}
+                </h4>
+                <p>{experience.position}</p>
+              </VerticalTimelineElement>
+            );
           })}
-        
         </VerticalTimeline>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default About;

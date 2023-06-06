@@ -31,14 +31,12 @@ export const LandingPage = () => {
               animate={{ x: 0 }}
               exit={{ x: -500 }}
               transition={{ repeat: Infinity, repeatDelay: 5, duration: 2 }}
-              className="flex text-2xl md:text-6xl items-center text-white text-bold z-10 uppercase tracking-widest mt-44 md:mt-12"
+              className="flex text-2xl md:text-7xl items-center text-white font-black z-10 uppercase tracking-widest mt-44 md:mt-12"
             >
-              Heitor T<Barbell size={24} className="text-yellow-300" />e
-              <Barbell size={24} className="text-yellow-300" />a
-              <Barbell size={24} className="text-yellow-300" />m
+              Heitor Team
             </motion.h1>
 
-            <p className="text-sm md:text-3xl text-white text-bold z-10 sm:px-10 md:px-52 uppercase">
+            <p className="text-sm md:text-3xl text-white font-black z-10 sm:px-10 md:px-52 uppercase">
               <Typewriter
                 words={[
                   "Conquiste seus objetivos em 2023!",

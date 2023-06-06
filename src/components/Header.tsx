@@ -19,7 +19,7 @@ export function Header() {
     <div className={`w-screen md:flex-row flex-col flex md:justify-between justify-start py-12 md:px-32 px-8 `}>
       <div className="flex justify-between">
         <a href="/" className=" z-10">
-          <img src={logo} className="text-white md:h-36 h-20 flex self-center" />
+          <img src={logo} className="text-white md:h-36 h-28 flex self-center" />
         </a>
 
         <button className="md:hidden flex self-center z-10">
