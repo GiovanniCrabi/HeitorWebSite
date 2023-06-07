@@ -1,4 +1,10 @@
-import { FacebookLogo, InstagramLogo, WhatsappLogo } from "phosphor-react";
+import {
+  EnvelopeSimple,
+  FacebookLogo,
+  InstagramLogo,
+  PhoneOutgoing,
+  WhatsappLogo,
+} from "phosphor-react";
 import { ButtonStyles } from "../components/ButtonStyles";
 import { SubHeader } from "../components/SubHeader";
 
@@ -19,22 +25,33 @@ export const Contact = () => {
           Escolha a melhor opção de contato para você!
         </h1>
       </div>
-      <div className="space-x-0 md:space-x-20 space-y-8 md:space-y-0 py-8 md:py-72 flex flex-col md:flex-row justify-center items-center bg-gradient-to-r from-black.5 to-black ">
-        <ButtonStyles
-          icon={<InstagramLogo />}
-          title="Instagram"
-          link="https://www.instagram.com/heitorcamilo.personal/"
-        />
-        <ButtonStyles
-          icon={<FacebookLogo />}
-          title="Facebook"
-          link="https://www.facebook.com/heitor.camilo.92"
-        />
+
+      <div className="space-x-0 md:space-x-20 space-y-8 md:space-y-0 py-8 md:py-72 flex flex-col md:flex-row justify-center items-center bg-gradient-to-r from-black.5 to-black  ">
         <ButtonStyles
           icon={<WhatsappLogo />}
-          title="Whatswapp"
+          title="Whatsapp"
           link="https://www.instagram.com/heitorcamilo.personal/"
         />
+        <ButtonStyles
+          icon={<PhoneOutgoing />}
+          title="Telefone"
+          link="tel:+5535998322606"
+        />
+        <ButtonStyles
+          icon={<EnvelopeSimple />}
+          title="E-mail"
+          link="mailto:heitordasilvacamilo@hotmail.com"
+        />
+      </div>
+
+      <div className="w-full flex items-center justify-center space-x-8 h-16 bg-gradient-to-r from-yellow.4 via-yellow.5 to-black animate-pulse">
+        <a href="">
+          <FacebookLogo className="font-black text-5xl hover:text-6xl transition-all duration-300" />
+        </a>
+
+        <a href="">
+          <InstagramLogo className="font-black text-5xl hover:text-6xl transition-all duration-300" />
+        </a>
       </div>
     </>
   );
