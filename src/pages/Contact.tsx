@@ -30,7 +30,7 @@ export const Contact = () => {
         <ButtonStyles
           icon={<WhatsappLogo />}
           title="Whatsapp"
-          link="https://www.instagram.com/heitorcamilo.personal/"
+          link="https://wa.me/5535998322606?text=Ol%C3%A1+Heitor%2C+poderia+me+ajudar%3F+ "
         />
         <ButtonStyles
           icon={<PhoneOutgoing />}
@@ -45,11 +45,11 @@ export const Contact = () => {
       </div>
 
       <div className="w-full flex items-center justify-center space-x-8 h-16 bg-gradient-to-r from-yellow.4 via-yellow.5 to-black animate-pulse">
-        <a href="">
+        <a href="https://www.facebook.com/heitor.camilo.92" target="_blank">
           <FacebookLogo className="font-black text-5xl hover:text-6xl transition-all duration-300" />
         </a>
 
-        <a href="">
+        <a href="https://www.instagram.com/heitorcamilo.personal/" target="_blank">
           <InstagramLogo className="font-black text-5xl hover:text-6xl transition-all duration-300" />
         </a>
       </div>

@@ -1,6 +1,5 @@
-import bg from "../assets/bgLanding2.png";
+import bg from "../assets/background.jpg";
 
-import { Barbell } from "phosphor-react";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { Header } from "../components/Header";
@@ -46,7 +45,7 @@ export const LandingPage = () => {
                 cursor
                 cursorStyle="_"
                 loop={5}
-                typeSpeed={200}
+                typeSpeed={250}
               />
             </p>
             <a
@@ -54,13 +53,13 @@ export const LandingPage = () => {
               target="_blank"
             >
               <motion.button
-                className="grid place-items-center bg-yellow-300 h-10 w-40 md:h-12 md:w-48 text-white rounded-full z-10 opacity-80 md:mt-20"
+                className="grid place-items-center bg-yellow-300 h-10 w-40 md:h-12 md:w-48 text-white rounded-full z-10 opacity-80 md:mt-20 hover:text-6xl"
                 initial={{ y: 500 }}
                 animate={{ y: 0 }}
                 exit={{ y: -500 }}
                 transition={{ repeat: Infinity, repeatDelay: 5, duration: 2 }}
               >
-                <span className="flex items-center text-base md:text-lg uppercase hover:bg-yellow.4 ">
+                <span className="flex items-center text-base md:text-lg uppercase">
                   Contacte-nos
                 </span>
               </motion.button>

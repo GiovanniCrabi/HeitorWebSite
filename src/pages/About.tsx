@@ -8,8 +8,41 @@ import { Barbell } from "phosphor-react";
 import { useEffect, useState } from "react";
 import { aboutHim, experienceData } from "../components/Contents";
 import { SubHeader } from "../components/SubHeader";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 const About = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScrollParagraph = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScrollParagraph);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollParagraph);
+    };
+  }, []);
+
+  const { scrollYProgress } = useScroll();
+
+  const paragraphVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
+  const yOffset = useTransform(scrollYProgress, [0, 1], [20, 0]);
+
   const [lineColor, setLineColor] = useState("white");
 
   useEffect(() => {
@@ -30,22 +63,29 @@ const About = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); 
+  }, []);
 
   return (
     <div className="flex-col">
       <SubHeader title="Sobre" />
       <div className="flex justify-center items-center">
-        <div className="bg-black.5 rounded-md px-8 md:px-48 py-8 mt-8 w-11/12 md:w-3/4 h-full">
+        <div className="bg-black.5 rounded-md md:px-48 py-8 mt-8 w-11/12 md:w-3/4 h-full">
           <div className="space-y-4">
-            {aboutHim.map((about, i ) => {
+            {aboutHim.map((about, i) => {
               return (
-                <p key={i} className="text-white text-sm md:text-lg font-bold text-center">
+                <motion.p
+                  key={i}
+                  initial="hidden"
+                  animate={scrollY > 0 ? "visible" : "hidden"} // Animação é ativada quando houver um scroll
+                  variants={paragraphVariants}
+                  style={{
+                  }}
+                  className="text-white text-sm md:text-lg font-bold text-center"
+                >
                   {about.paragraph}
-                </p>
-              )
+                </motion.p>
+              );
             })}
-            
           </div>
         </div>
       </div>

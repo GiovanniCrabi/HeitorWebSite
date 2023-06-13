@@ -20,12 +20,12 @@ export const Evolutions = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center py-6  px-6 md:px-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center py-6 px-6 md:px-20">
         {EvolutionsData.map((evolution, i) => {
           return (
-            <a key={i} href={evolution.link} target="_blank" className="h-80 w-80 relative">
+            <a key={i} href={evolution.link} target="_blank" className="h-80 w-80 relative  duration-300 hover:rounded-lg transform hover:scale-110 border-black hover:border-4 hover:border-yellow-400">
               <div
-                className="hover:opacity-20 transition ease-in-out delay-150 w-80 h-80 bg-auto bg-no-repeat bg-center "
+                className="hover:opacity-20 transition ease-in-out delay-150 w-full h-full bg-auto bg-no-repeat bg-center"
                 style={{
                   backgroundImage: `url(${evolution.img})`,
                   backgroundSize: 'cover',
