@@ -69,7 +69,7 @@ const About = () => {
     <div className="flex-col">
       <SubHeader title="Sobre" />
       <div className="flex justify-center items-center">
-        <div className="bg-black.5 rounded-md md:px-48 py-8 mt-8 w-11/12 md:w-3/4 h-full">
+        <div className="bg-black.5 rounded-md  py-8 mt-8 w-11/12 md:w-3/4 h-full">
           <div className="space-y-4">
             {aboutHim.map((about, i) => {
               return (
@@ -78,9 +78,8 @@ const About = () => {
                   initial="hidden"
                   animate={scrollY > 0 ? "visible" : "hidden"} // Animação é ativada quando houver um scroll
                   variants={paragraphVariants}
-                  style={{
-                  }}
-                  className="text-white text-sm md:text-lg font-bold text-center"
+                  style={{}}
+                  className="text-white text- md:text-lg font-bold text-center px-8 md:px-48"
                 >
                   {about.paragraph}
                 </motion.p>
