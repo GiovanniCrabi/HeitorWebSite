@@ -1,15 +1,14 @@
-import React from "react";
 
-import { LandingPage } from "./pages/LandingPage";
 import "./index.css";
+import { LandingPage } from "./pages/LandingPage";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./pages/About";
 import { Consultancy } from "./pages/Consultancy";
 import { Contact } from "./pages/Contact";
 import { Evolutions } from "./pages/Evolutions";
-import About from "./pages/About";
 
-function App() {
+ function App() {
   return (
     <BrowserRouter>
       <Routes>

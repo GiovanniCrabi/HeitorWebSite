@@ -1,8 +1,9 @@
 import bg from "../assets/background.jpg";
 
-import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 import { Header } from "../components/Header";
+
 
 export const LandingPage = () => {
   return (
@@ -45,7 +46,7 @@ export const LandingPage = () => {
                 cursor
                 cursorStyle="_"
                 loop={5}
-                typeSpeed={250}
+                typeSpeed={150}
               />
             </p>
             <a
