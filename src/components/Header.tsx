@@ -1,11 +1,19 @@
-import { useState } from "react"
+import { useState } from "react";
 
 import { List, X } from 'phosphor-react';
-import { Links } from "./Contents";
 
 import logo from '../assets/logoH.png';
 
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+
+const Links = [
+  { name: 'HOME', src: '/' },
+  { name: 'SOBRE', src: '/sobre' },
+  { name: 'CONSULTORIA', src: '/consultoria' },
+  { name: 'EVOLUÇÕES', src: '/evolucoes' },
+  { name: 'CONTATO', src: '/contato' },
+]
+
 
 
 export function Header() {

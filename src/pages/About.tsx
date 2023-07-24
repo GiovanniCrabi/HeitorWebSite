@@ -73,7 +73,7 @@ const About = () => {
 
       try {
         const { introduction } = await request<{ introduction: Introduction }>(
-          'https://api-eu-west-2.hygraph.com/v2/clhysrfcp27uz01ta7k1p7ves/master',
+          import.meta.env.VITE_HYGRAPH_URL,
           query
         );
 
@@ -173,9 +173,9 @@ const About = () => {
                 contentStyle={{ background: "#eab308", color: "#050101" }}
                 contentArrowStyle={{ borderRight: "7px solid  #eab308" }}
                 icon={<Barbell />}
-                iconClassName="bg-yellow-500 w-2 h-2 rounded-full"
+                iconClassName="bg-yellow-500 w-2 h-2 rounded-full border-2 border-yellow-500"
               >
-                <h1 className="text-xl font-bold text-gray-200">
+                <h1 className="text-xl font-bold">
                   <RichText content={item.functionJob.raw} />
                 </h1>
 

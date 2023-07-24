@@ -15,7 +15,7 @@ export const ButtonStyles = ({
   link,
 }: ButtonConsultancy) => {
   return (
-    <div className="bg-black.5 flex px-8 py-8 justify-center items-center max-w-[85%] w-full h-full md:w-[28rem] md:h-[25rem] rounded-full transition-all duration-300 ease-in-out hover:rounded-lg transform hover:scale-110 border-black hover:border-4 hover:border-yellow-400">
+    <div className="bg-black.5 flex px-8 py-8 justify-center items-center max-w-[85%] w-full h-full md:w-[28rem] md:h-[28rem] rounded-full transition-all duration-300 ease-in-out hover:rounded-lg transform hover:scale-110 border-black hover:border-4 hover:border-yellow-400">
       <div className="column text-center space-y-8">
         <div className="flex items-center justify-center text-yellow.5 text-6xl">{ icon }</div>
         <h1 className="text-yellow.5  font-extrabold text-lg md:text-2xl">
